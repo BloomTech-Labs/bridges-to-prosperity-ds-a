@@ -23,7 +23,8 @@ DB_PORT = os.getenv("DB_HOST")
 # breakpoint()
 
 # connection = psycopg2.connect(database = DB_NAME, user=DB_USER, password = DB_PASSWORD, host = DB_HOST, port = '5432')
-connection = psycopg2.connect(dbname = DB_NAME, user=DB_USER, password = DB_PASSWORD, host = DB_HOST, port = '5432')
+connection = psycopg2.connect(
+    dbname=DB_NAME, user=DB_USER, password=DB_PASSWORD, host=DB_HOST, port='5432')
 # connection = psycopg2.connect(database = DB_NAME, user=DB_USER, password = DB_PASSWORD, host = DB_HOST)
 
 print("CONNECTION:", connection)
@@ -43,10 +44,3 @@ result = cursor.fetchall()
 print("RESULT:", type(result))
 print(result)
 # Result: [(0, 'Rwanda', 'Western Province', 'Rusizi', 36, 'Giheke', 3605, 'Gakomeye', 360502, 'Buzi', 36050201, 'Buzi', 1014107, 'Suspended', 'Rejected', 'Technical', 0, 0, -2.42056, 28.9662, 'Buzi', 36050201, 'Kabuga', 36050203, 'Kagarama', 36050204, 'Gacyamo', 36050202, 'Gasheke', None, 'Project Assessment - 2018.10.29', 'a1if1000002e51bAAA', '006f100000d1fk1')]
-
-
-
-
-
-
-
