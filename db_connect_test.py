@@ -13,14 +13,6 @@ DB_PASSWORD = os.getenv("DB_PASSWORD")
 DB_HOST = os.getenv("DB_HOST")
 DB_PORT = os.getenv("DB_HOST")
 
-# engine = psycopg2.connect(
-#     database="database-1-labs27-bridges-a",
-#     user="postgres",
-#     password="72sbal-sergtsop",
-#     host="database-1-labs27-bridges-a.c2tzpp7p945r.us-west-1.rds.amazonaws.com",
-#     port='5432'
-# )
-# breakpoint()
 
 # connection = psycopg2.connect(database = DB_NAME, user=DB_USER, password = DB_PASSWORD, host = DB_HOST, port = '5432')
 connection = psycopg2.connect(
