@@ -120,3 +120,52 @@ async def get_record(item: Item):
     pg = PostgreSQL()
     return_json = pg.fetch_query_given_project(project_code)
     return return_json
+
+@router.get('/database')
+async def get_all_record():
+    """
+    Returns all records from the database
+    # Response
+    - ID: integer, sequential
+    - country: text
+    - province: text
+    - district: text
+    - district_id: number
+    - sector: text
+    - sector_id: number
+    - cell: text
+    - cell_id: integer
+    - village: text
+    - name: text
+    - project_code: integer
+    - type: text
+    - stage: text
+    - sub_stage: text
+    - individuals_directly_served: integer
+    - span: integer
+    - lat: double precision
+    - long: double precision
+    - community_served_1: text
+    - community_served_1_id: integer
+    - community_served_2: text
+    - community_served_2_id: integer
+    - community_served_3: text
+    - community_served_3_id: integer
+    - community_served_4: text
+    - community_served_4_id: integer
+    - community_served_5: text
+    - community_served_5_id: integer
+    - form: text
+    - case_safe_id: text
+    - opportunity_id: text
+    - inc_income: double precision
+    - inc_income_rwf: double precision
+    - inc_income_usd: double precision
+    - bridge_image: text
+    """
+    # X_new = item.to_df()
+    # item_str = item.to_string()
+    # project_code = int(item_str[item_str.find('=')+1:])
+    pg = PostgreSQL()
+    return_json = pg.fetch_all_records()
+    return return_json
