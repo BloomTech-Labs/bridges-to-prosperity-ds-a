@@ -50,6 +50,24 @@ class PostgreSQL:
         result = cursor.fetchall()
         return result
 
+    def fetch_all_records(self):
+        cursor = self.connection.cursor()
+        # 'ID','country','province','district','district_id','sector','sector_id','cell','cell_id','village','village_id','name','project_code','type','stage','sub_stage','individuals_directly_served','span','lat','long','form','case_safe_id','opportunity_id','inc_income','inc_income_rwf','inc_income_usd','bridge_image']
+        query = f"""SELECT "ID", country, province, district,district_id,sector,sector_id,cell,cell_id,village,village_id,name,project_code,type,stage,sub_stage,individuals_directly_served,span,lat,long,form,case_safe_id,opportunity_id,inc_income,inc_income_rwf,inc_income_usd,bridge_image FROM public."Bridges"  """
+        # query = f"""SELECT "ID", country FROM public."Bridges" limit 5 """
+        # query = f"""SELECT 'ID','country' FROM public."Bridges" """
+        # query = f"""SELECT * FROM public."Bridges" """
+        # query = f"""SELECT "ID","country" FROM public."Bridges" limit top 5"""
+        cursor.execute(query)
+        result = cursor.fetchall()
+        columns = ['ID', 'country', 'province', 'district', 'district_id', 'sector', 'sector_id', 'cell', 'cell_id', 'village', 'village_id', 'name', 'project_code', 'type', 'stage',
+                   'sub_stage', 'individuals_directly_served', 'span', 'lat', 'long', 'form', 'case_safe_id', 'opportunity_id', 'inc_income', 'inc_income_rwf', 'inc_income_usd', 'bridge_image']
+        # columns = ['ID', 'country']
+        df = pd.DataFrame(result, columns=columns)
+        df_json = df.to_json(orient='records')
+        parsed = json.loads(df_json)
+        return parsed
+
     def fetch_query_given_project(self, project_code: int):
         cursor = self.connection.cursor()
         query = f"""SELECT * FROM public."Bridges" where project_code={project_code} """
@@ -84,7 +102,7 @@ class Item(BaseModel):
     """Use this data model to parse the request body JSON."""
 
     # x1: float = Field(..., example=3.14)
-    project_code: int = Field(..., example=1014106)
+    # project_code: int = Field(..., example=1014106)
     # x3: str = Field(..., example='banjo')
 
     def to_df(self):
@@ -103,16 +121,12 @@ class Item(BaseModel):
 async def get_record(item: Item):
     """
     Returns all records from the database corresponding to a given project_code
-
     # Request Body
     - `project_code`: integer
-
     # Response
     - `ID`: integer, sequential
     - `country`: text
     - ......
-
-
     """
     X_new = item.to_df()
     item_str = item.to_string()
@@ -121,7 +135,8 @@ async def get_record(item: Item):
     return_json = pg.fetch_query_given_project(project_code)
     return return_json
 
-@router.get('/database')
+
+@router.get('/getall')
 async def get_all_record():
     """
     Returns all records from the database
