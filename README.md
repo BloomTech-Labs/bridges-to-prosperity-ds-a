@@ -8,9 +8,11 @@
 
 ## 1️⃣ Bridge of Prosperity Data Science API
 
- You can find the deployed project frontend at https://b.bridgestoprosperity.dev/
+ You can find the deployed project frontend at https://27a.bridgestoprosperity.dev/
 
- You can find the deployed data science API at http://bridges-to-presperity-08272020.eba-3nqy3zpc.us-east-1.elasticbeanstalk.com/
+ You can find the deployed data science API at http://labs27-bridges-test-1.eba-aafyzx4e.us-east-1.elasticbeanstalk.com/
+
+ You can find the YouTube demo video at https://youtu.be/frpHHafi3po
 
 
 
@@ -42,7 +44,7 @@
 
 Our API provides various merged and integrated Bridges-to-Prosperity bridge data endpoints, passing Rwandan bridge site data to the web backend/frontend application. The API is basted on the [FastAPI framework](https://fastapi.tiangolo.com/), and hosted via [AWS Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html).
 
-Detailed instructions on how to get started with FastAPI, Docker and AWS web deployment via Elastic Beanstalk can be found in this [ds starter readme](https://github.com/Lambda-School-Labs/Labs25-Bridges_to_Prosperity-TeamB-ds/blob/feature/ds_readme/README_ds_starter.md).
+Detailed instructions on how to get started with FastAPI, Docker and AWS web deployment via Elastic Beanstalk can be found in this [ds starter readme](https://github.com/Lambda-School-Labs/labs-ds-starter).
 
 
 ## Tech stack
@@ -269,7 +271,7 @@ When your API receives a POST request, FastAPI automatically parses and validate
 
 # Deployment to AWS
 
-Web deployment of the API was done analogously to the procedure described in the [ds starter readme](https://github.com/Lambda-School-Labs/Labs25-Bridges_to_Prosperity-TeamB-ds/blob/feature/ds_readme/README_ds_starter.md).
+Web deployment of the API was done analogously to the procedure described in the [ds starter readme](https://github.com/Lambda-School-Labs/labs-ds-starter).
 
 We used Docker to build the image locally, test it, then pushed it to Docker Hub.
 
@@ -306,15 +308,11 @@ To redeploy:
 
 ## URLs to Deployed Endpoints
 
-- API test interface: http://bridges-to-presperity-08272020.eba-3nqy3zpc.us-east-1.elasticbeanstalk.com/
+- Data output in desired format: http://labs27-bridges-test-1.eba-aafyzx4e.us-east-1.elasticbeanstalk.com/database
 
 <br>
 
-- Data output in desired format: http://bridges-to-presperity-08272020.eba-3nqy3zpc.us-east-1.elasticbeanstalk.com/final-data
-
-<br>
-
-- Data output with some extended information: http://bridges-to-presperity-08272020.eba-3nqy3zpc.us-east-1.elasticbeanstalk.com/final-data/extended
+- Data output with some extended information: http://bridges-to-presperity-08272020.eba-3nqy3zpc.us-east-1.elasticbeanstalk.com/database/extended
 
 
 
