@@ -5,7 +5,7 @@ import uvicorn
 from app.api import predict, viz, database
 
 app = FastAPI(
-    title='Labs27-Bridges-TeamA',
+    title='Labs28-Bridges-TeamA',
     description='Redeployment test',
     version='0.1',
     docs_url='/',
