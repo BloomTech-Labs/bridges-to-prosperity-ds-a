@@ -24,21 +24,21 @@ app.add_middleware(
 )
 
 
-@app.get("/predict")
-'''
-Any of the data can be used, but our guess is that Estimated Span, Height Differential 
-Between Banks, Created By, and Flag for Rejection are likely to be the most reliable predictors. 
-'''
-def predict():
-    return
+# @app.get("/predict")
+# '''
+# Any of the data can be used, but our guess is that Estimated Span, Height Differential 
+# Between Banks, Created By, and Flag for Rejection are likely to be the most reliable predictors. 
+# '''
+# def predict():
+#     return
 
-@app.get(/hospital)
-def nearest_hospital(lat, long):
-    return name of hospital, distance, lat/long of hospital
+# @app.get(/hospital)
+# def nearest_hospital(lat, long):
+#     return name of hospital, distance, lat/long of hospital
 
-@app.get(/bridges)
-def bridges(lat, long):
-    return info
+# @app.get(/bridges)
+# def bridges(lat, long):
+#     return info
 
 
 if __name__ == '__main__':
