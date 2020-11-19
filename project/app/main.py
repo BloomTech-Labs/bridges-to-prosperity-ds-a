@@ -7,7 +7,7 @@ from app.api import predict, viz, routes
 app = FastAPI(
     title='Labs28-Bridges-TeamA',
     description='Redeployment test',
-    version='0.1.2',
+    version='0.1.9',
     docs_url='/',
 )
 

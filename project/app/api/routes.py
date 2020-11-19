@@ -7,7 +7,7 @@ router = APIRouter()
 
 
 def bridge_csv():
-    df = pd.read_csv('app/api/finalv2.csv', delimiter= ';')
+    df = pd.read_csv('app/api/FinalCleanedData.csv', delimiter= ';')
     return df 
 
 
