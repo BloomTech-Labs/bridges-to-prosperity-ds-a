@@ -1,3 +1,23 @@
-# Labs DS template
+# Foobar
 
-[Docs](https://docs.labs.lambdaschool.com/data-science/)
+Foobar is a Python library for dealing with word pluralization.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+```bash
+
+```
+
+## Usage
+
+```python
+import 
+```
+
+## Contributors
+
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
