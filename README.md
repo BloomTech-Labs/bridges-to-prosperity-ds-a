@@ -20,10 +20,10 @@ This repository contains:
 ```
 
 ##  App & Video
-[Frontend](https://www.28a.bridgestoprosperity.dev/)
-[Backend](https://bridges-a-api.herokuapp.com/)
-[DS API](https://a-ds.bridgestoprosperity.dev/)
-[Team Video](https://youtu.be/szCUG177M44)
+* [Frontend](https://www.28a.bridgestoprosperity.dev/)
+* [Backend](https://bridges-a-api.herokuapp.com/)
+* [DS API](https://a-ds.bridgestoprosperity.dev/)
+* [Team Video](https://youtu.be/szCUG177M44)
 
 
 
