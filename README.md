@@ -13,11 +13,9 @@ This repository contains:
 
 ## Deployment Instructions
 
-[AWS Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html) to install.
+[AWS Elastic Beanstalk Documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html)
+[Lambda AWS Instructions](https://docs.labs.lambdaschool.com/data-science/tech/aws-elastic-beanstalk)
 
-```bash
-
-```
 
 ##  App & Video
 * [Frontend](https://www.28a.bridgestoprosperity.dev/)
